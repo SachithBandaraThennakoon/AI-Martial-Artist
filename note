@@ -1,0 +1,193 @@
+ai-martial-brain/
+│
+├── brain/
+│
+│   # 1️⃣ 👁️ SENSING
+│   ├── sensing/
+│   │   ├── vision_sensor.py
+│   │   └── audio_sensor.py              # 🎤 mic input
+│
+│   # 2️⃣ ⚡ SIGNAL
+│   ├── signal/
+│   │   ├── pipeline.py
+│   │   └── streaming.py                # real-time audio/video
+│
+│   # 3️⃣ 🔍 PERCEPTION
+│   ├── perception/
+│   │   ├── pose_estimator.py
+│   │   ├── angle_extractor.py
+│   │   ├── weakness_detector.py        # 🔥 NEW (weak points)
+│   │   └── attention.py
+│
+│   # 4️⃣ 🧠 AWARENESS
+│   ├── awareness/
+│   │   ├── movement_analysis.py
+│   │   └── situation_analysis.py       # 🔥 opponent risk logic
+│
+│   # 5️⃣ ⏱️ TEMPORAL
+│   ├── temporal/
+│   │   ├── motion_memory.py
+│   │   └── trend_analysis.py           # improving or worsening
+│
+│   # 6️⃣ 💾 MEMORY
+│   ├── memory/
+│   │
+│   │   ├── working_memory/
+│   │   │   └── session.py              # current context
+│   │
+│   │   ├── episodic_memory/
+│   │   │   └── training_history.py
+│   │
+│   │   ├── semantic_memory/
+│   │   │   ├── techniques.py
+│   │   │   ├── tactics.py              # 🔥 opponent strategy
+│   │   │   └── philosophy.py
+│   │
+│   │   └── conversational_memory/      # 🔥 NEW
+│   │       └── dialogue_history.py
+│
+│   # 7️⃣ 🧠 COGNITION
+│   ├── cognition/
+│   │   ├── llm.py
+│   │   ├── reasoning.py
+│   │   ├── coaching.py
+│   │   └── conversation.py             # 🔥 NEW (chat logic)
+│
+│   # 8️⃣ 🎯 CONSCIOUSNESS
+│   ├── consciousness/
+│   │   ├── orchestrator.py
+│   │   ├── dialogue_manager.py         # 🔥 NEW
+│   │   ├── decision.py
+│   │   ├── emotion.py
+│   │   └── personality.py
+│
+│   # 9️⃣ 🔮 PREDICTION
+│   ├── prediction/
+│   │   ├── movement_predictor.py
+│   │   └── risk_predictor.py           # 🔥 opponent attack prediction
+│
+│   # 🔟 💪 ACTION
+│   ├── action/
+│   │
+│   │   ├── communication/
+│   │   │   ├── text_output.py
+│   │   │   ├── voice_output.py         # 🔥 TTS
+│   │   │   └── dialogue_response.py
+│   │
+│   │   ├── visualization/              # 🔥 NEW
+│   │   │   ├── skeleton_overlay.py     # red weak points
+│   │   │   ├── heatmap.py
+│   │   │   └── indicators.py
+│   │
+│   │   └── api_routes.py
+│
+│   # 1️⃣1️⃣ 🔁 LEARNING
+│   ├── learning/
+│   │   ├── feedback_loop.py
+│   │   ├── evaluation.py
+│   │   └── adaptation.py              # 🔥 personalize training
+│
+├── body/                              # 🧍 INTERFACE
+│   ├── frontend/
+│   │   ├── ui/
+│   │   │   ├── skeleton_view.jsx
+│   │   │   ├── weak_point_overlay.jsx   # 🔥 red highlights
+│   │   │   ├── feedback_panel.jsx
+│   │   │   └── voice_indicator.jsx
+│   │
+│   │   ├── input/
+│   │   │   ├── camera_input.jsx
+│   │   │   └── microphone_input.jsx     # 🎤
+│   │
+│   │   └── interaction/
+│   │       └── conversation_ui.jsx      # 🔥 chat UI
+│   │
+│   └── sensors/                        # future hardware
+│
+├── core/
+│   ├── config.py
+│   ├── database.py
+│   └── security.py
+│
+├── main.py
+└── .env
+
+/////////////////////////////////
+brain/
+ ├── memory/
+ │
+ │   ├── semantic_memory/       # 🧠 knowledge (facts)
+ │   │   ├── techniques.py
+ │   │   ├── technique_steps.py
+ │   │   └── target_angles.py
+ │
+ │   ├── identity_memory/       # 👤 user identity
+ │   │   └── user.py
+ │
+ │   └── episodic_memory/       # 📜 future (sessions)
+ │       └── training_sessions.py (later)
+ 
+//////////
+brain/
+ └── action/
+     ├── execution/          # API layer (movement output)
+     │   ├── technique_api.py
+     │   └── training_api.py
+     │
+     ├── identity/           # authentication (self-awareness)
+     │   └── auth_api.py
+///////////////////////////////////////////////////////////////////////////////////
+
+User moves + speaks
+ ↓
+Camera + Mic (sensing)
+ ↓
+Pose + Audio processing
+ ↓
+Weakness detection + situation analysis
+ ↓
+Memory + context + conversation history
+ ↓
+LLM reasoning
+ ↓
+Decision (what to say + show)
+ ↓
+Output:
+   🎤 Voice
+   💬 Text
+   🔴 Visual highlights
+
+///////////////////////////////
+uvicorn main:app --reload
+pip install psycopg2-binary
+pip install python-jose passlib[bcrypt]
+
+pip uninstall bcrypt passlib -y
+pip install bcrypt==4.0.1
+pip install passlib[bcrypt]
+
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+uvicorn main:app --reload
+python -m venv venv
+venv\Scripts\activate
+
+pip install python-multipart
+npm install @mediapipe/tasks-vision
+
+pip install python-multipart
+///////////////////////////////////////////////
+
+Ctrl + Shift + P → Reload Window
+
+npm install @mediapipe/pose @mediapipe/drawing_utils @mediapipe/camera_utils
+
+
+/////////////////////////////////
+npm create vite@latest
+  npm install
+  npm run dev
+
+npm install react-router-dom
+npm install @mediapipe/tasks-vision

@@ -21,7 +21,6 @@ def analyze_movement(required_parts, live_angles):
         upper_bound = center + 0.5 * range_val
 
         if value < lower_bound or value > upper_bound:
-            # 🚫 ignore extreme noise
             continue
 
         # -----------------------------
