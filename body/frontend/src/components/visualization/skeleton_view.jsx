@@ -64,7 +64,9 @@ export default function SkeletonView({
   const previousHandsRef = useRef(null);
   const lastFrameTimeRef = useRef(0);
 
-  const SMOOTHING = 0.6;
+  const previousAnglesRef = useRef({});
+  const SMOOTHING = 0.7;
+
   const FPS_LIMIT = 25;
 
 
@@ -220,7 +222,15 @@ export default function SkeletonView({
               poseLandmarks[c]
             );
 
-            anglesPayload[part.body_part] = angle;
+            const prev = previousAnglesRef.current[part.body_part];
+
+            const smoothAngle = prev
+              ? prev * (1 - SMOOTHING) + angle * SMOOTHING
+              : angle;
+
+            previousAnglesRef.current[part.body_part] = smoothAngle;
+
+            anglesPayload[part.body_part] = smoothAngle;
           }
         });
 
