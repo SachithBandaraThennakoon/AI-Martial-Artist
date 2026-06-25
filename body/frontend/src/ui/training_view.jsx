@@ -17,6 +17,17 @@ export default function TrainingView() {
   const [feedback, setFeedback] = useState("");
   const [summary, setSummary] = useState("");
 
+  const [displayAngles, setDisplayAngles] = useState({});
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDisplayAngles(angles);
+    }, 200); // update every 200ms
+
+    return () => clearInterval(interval);
+  }, [angles]);
+
+
   // ✅ FIX: ADD THIS
   const [displayedSummary, setDisplayedSummary] = useState("🔥 Start Training");
 
